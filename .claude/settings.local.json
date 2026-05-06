@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__75e32d0e-11f6-469e-ab26-8b1e6fe72bc1__list_projects",
+      "mcp__75e32d0e-11f6-469e-ab26-8b1e6fe72bc1__list_tables",
+      "mcp__75e32d0e-11f6-469e-ab26-8b1e6fe72bc1__confirm_cost",
+      "mcp__75e32d0e-11f6-469e-ab26-8b1e6fe72bc1__create_project",
+      "mcp__75e32d0e-11f6-469e-ab26-8b1e6fe72bc1__apply_migration",
+      "mcp__75e32d0e-11f6-469e-ab26-8b1e6fe72bc1__get_project_url",
+      "mcp__75e32d0e-11f6-469e-ab26-8b1e6fe72bc1__get_publishable_keys",
+      "mcp__ffb2705a-914c-4ba3-9e08-aff35045f202__list_teams",
+      "mcp__ffb2705a-914c-4ba3-9e08-aff35045f202__list_projects",
+      "mcp__ffb2705a-914c-4ba3-9e08-aff35045f202__deploy_to_vercel"
+    ]
+  }
+}
