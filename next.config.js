@@ -1,6 +1,7 @@
 const withPWA = require('next-pwa')({
   dest: 'public',
-  disable: process.env.NODE_ENV === 'development',
+  // Temporarily disable PWA to avoid stale cached versions after deployment.
+  disable: true,
   register: true,
   skipWaiting: true,
 });

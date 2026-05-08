@@ -34,6 +34,27 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="bg-gray-50 dark:bg-gray-900 min-h-screen font-sans">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+                navigator.serviceWorker.getRegistrations().then(registrations => {
+                  if (registrations.length > 0) {
+                    Promise.all(registrations.map(reg => reg.unregister()))
+                      .then(() => {
+                        if (!window.location.search.includes('sw-unregistered')) {
+                          const url = new URL(window.location.href);
+                          url.searchParams.set('sw-unregistered', '1');
+                          window.location.replace(url.toString());
+                        }
+                      })
+                      .catch(() => {});
+                  }
+                });
+              }
+            `,
+          }}
+        />
         <div className="max-w-md mx-auto relative min-h-screen bg-white dark:bg-gray-900 shadow-xl">
           {children}
         </div>
